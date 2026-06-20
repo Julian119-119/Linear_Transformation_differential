@@ -39,47 +39,7 @@ $$
 
 ### Counterexample
 
-Let
-
-$$
-f(x)=x,\qquad g(x)=x.
-$$
-
-Then
-
-$$
-D(fg)
-=
-D(x^2)
-=
-2x.
-$$
-
-On the other hand,
-
-$$
-D(f)D(g)
-=
-D(x)D(x)
-=
-1.
-$$
-
-Since
-
-$$
-2x \neq 1,
-$$
-
-the conjecture
-
-$$
-D(fg)=D(f)D(g)
-$$
-
-is false.
-
-Therefore, differentiation does not preserve multiplication.
+Let $f(x)=x,\qquad g(x)=x$.<br>Then $D(fg)=D(x^2)=2x.$<br>On the other hand, $D(f)D(g)=D(x)D(x)=1.$<br>Since $2x \neq 1$, the conjecture $D(fg)=D(f)D(g)$ is false.<br>Therefore, differentiation does not preserve multiplication.
 
 ---
 
@@ -109,45 +69,15 @@ At this point, both $D$ and $C_g$ are linear transformations. Therefore, $D \cir
 
 Using Taylor series expansions, many transcendental functions can be represented as infinite polynomials.
 
-$$
-\begin{aligned}
-e^x
-&=
-\sum_{n=0}^{\infty}
-\frac{x^n}{n!}
-\\
-\sin x
-&=
-\sum_{n=0}^{\infty}
-(-1)^n
-\frac{x^{2n+1}}{(2n+1)!}
-\\
-\cos x
-&=
-\sum_{n=0}^{\infty}
-(-1)^n
-\frac{x^{2n}}{(2n)!}
-\\
-\arctan x
-&=
-\sum_{n=0}^{\infty}
-(-1)^n
-\frac{x^{2n+1}}{2n+1}
-\\
-\ln(1+x)
-&=
-\sum_{n=1}^{\infty}
-(-1)^{n-1}
-\frac{x^n}{n}
-\end{aligned}
-$$
+$$\begin{aligned}
+&e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} \\
+&\sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} \\
+&\cos x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!} \\
+&arctan x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1} \\
+&\ln(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n}
+\end{aligned}$$
 
-Therefore, transcendental functions can be viewed as elements of an infinite-dimensional function space with basis
-
-$$
-\{1,x,x^2,x^3,\ldots\}.
-$$
-this thing leads me to think:
+Therefore, transcendental functions can be viewed as elements of an infinite-dimensional function space with basis $\{1,x,x^2,x^3,\ldots\}.$<br>this thing leads me to think:
 
 > If differentiation is a linear transformation on polynomial spaces, can the same idea be extended to an infinite-dimensional function space?
 
@@ -159,103 +89,46 @@ Assume that differentiation can be applied term-by-term to Taylor series.
 
 ### Exponential Function
 
-$$
-e^x
-=
-1+x+\frac{x^2}{2!}
-+\frac{x^3}{3!}
-+\cdots
-$$
+$$e^x = 1+x+\frac{x^2}{2!} +\frac{x^3}{3!} + \cdots$$
 
 Differentiating term-by-term,
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 D(e^x)
-&=
-D\left(
-1+x+\frac{x^2}{2!}
-+\frac{x^3}{3!}
-+\cdots
-\right)
-\\
-&=
-0+1+x+\frac{x^2}{2!}
-+\frac{x^3}{3!}
-+\cdots
-\\
-&=
-e^x.
-\end{aligned}
-$$
+&= D\left( 1+x+\frac{x^2}{2!} +\frac{x^3}{3!} +\cdots \right) \\
+&= 0+1+x+\frac{x^2}{2!} +\frac{x^3}{3!} +\cdots \\
+&= e^x
+\end{aligned}$$
 
-Hence,
-
-$$
-(e^x)'=e^x.
-$$
+Hence, $(e^x)'=e^x.$
 
 ### Sine Function
 
-$$
-\sin x
-=
-x-\frac{x^3}{3!}
-+\frac{x^5}{5!}
--\cdots
-$$
+$$\sin x = x-\frac{x^3}{3!} +\frac{x^5}{5!} -\cdots$$
 
 Differentiating term-by-term,
 
-$$
-\begin{aligned}
-D(\sin x)
-&=
-1-\frac{x^2}{2!}
-+\frac{x^4}{4!}
--\cdots
-\\
-&=
-\cos x.
-\end{aligned}
-$$
+$$\begin{aligned}
+D(\sin x) 
+&= 1-\frac{x^2}{2!} +\frac{x^4}{4!} -\cdots \\
+&= \cos x
+\end{aligned}$$
 
-Hence,
-
-$$
-(\sin x)'=\cos x.
-$$
+Hence, $(\sin x)'=\cos x$
 
 ### Cosine Function
 
-$$
-\cos x
-=
-1-\frac{x^2}{2!}
-+\frac{x^4}{4!}
--\cdots
-$$
+$$\cos x = 1-\frac{x^2}{2!} +\frac{x^4}{4!} -\cdots$$
 
 Differentiating term-by-term,
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 D(\cos x)
-&=
-0-x+\frac{x^3}{3!}
--\frac{x^5}{5!}
-+\cdots
-\\
-&=
--\sin x.
-\end{aligned}
-$$
+&= 0-x+\frac{x^3}{3!} -\frac{x^5}{5!} + \cdots \\
+&= -\sin x.
+\end{aligned}$$
 
-Hence,
-
-$$
-(\cos x)'=-\sin x.
-$$
+Hence, $(\cos x)'=-\sin x$
 
 ---
 
