@@ -1,6 +1,6 @@
 # Introduction
 
-During a linear algebra lecture, professor teach our using linear transformation to solve polynomial transformation. 
+During a linear algebra lecture, professor teach us using linear transformation to solve polynomial transformation. 
 
 This example immediately raised a question for me.
 
@@ -22,7 +22,7 @@ Rather than attempting to prove the familiar differentiation formulas directly, 
 ## polynomial differential operator is linear transformation
 ### Proof
 
-Let $P_n$ be the vector space of all polynomials of degree at most n, and define the differential operator $D:P_n \rightarrow P_{n-1}$ by $D(f)=f',\; f\in P_n.$
+Let $P_n$ be the vector space of all polynomials of degree at most n, and define the differential operator $D:P_n \rightarrow P_{n-1}$ by $D(f)=f',\ f\in P_n.$
 
 To show that $D$ is a linear transformation, it suffices to verify that $\forall \ f,g\in P_n, \ D(af+bg)=aD(f)+bD(g)$ and scalars $a,b\in\mathbb{R}$.
 
@@ -33,7 +33,7 @@ D(af+bg)
 &=(af+bg)'\\  
 &=\lim_{h\to0} \frac{(af+bg)(x+h)-(af+bg)(x)}{h}\\  
 &=\lim_{h\to0} \frac{a f(x+h)+b g(x+h)-a f(x)-b g(x)}{h}\\  
-&=\lim_{h\to0} \left( a \; \frac{f(x+h)-f(x)}{h} + b \; \frac{g(x+h)-g(x)}{h} \right) \\  
+&=\lim_{h\to0} \left( a \ \frac{f(x+h)-f(x)}{h} + b \ \frac{g(x+h)-g(x)}{h} \right) \\  
 &= a\lim_{h\to0} \frac{f(x+h)-f(x)}{h} + b\lim_{h\to0} \frac{g(x+h)-g(x)}{h} \\  
 &= af'(x)+bg'(x) \\  
 &= aD(f)+bD(g).  
@@ -52,7 +52,7 @@ $$D(fg)=D(f)D(g).$$
 
 ### Counterexample
 
-Let $f(x)=x,\; g(x)=x$.<br>Then $D(fg)=D(x^2)=2x.$<br>On the other hand, $D(f)D(g)=D(x)D(x)=1.$<br>Since $2x \neq 1$, the conjecture $D(fg)=D(f)D(g)$ is false.<br>Therefore, differentiation does not preserve multiplication.
+Let $f(x)=x,\ g(x)=x$.<br>Then $D(fg)=D(x^2)=2x.$<br>On the other hand, $D(f)D(g)=D(x)D(x)=1.$<br>Since $2x \neq 1$, the conjecture $D(fg)=D(f)D(g)$ is false.<br>Therefore, differentiation does not preserve multiplication.
 
 ## Reflection
 
@@ -97,10 +97,10 @@ Using Taylor series expansions, many transcendental functions can be represented
 
 $$\begin{aligned}
 &e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} \\
-&\sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} \\
+&\sin x = \sum_{n=0}^{\infty} (-1)^n \ \frac{x^{2n+1}}{(2n+1)!} \\
 &\cos x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!} \\
-&\arctan x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1} \\
-&\ln(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n}
+&\arctan x = \sum_{n=0}^{\infty} (-1)^n \ \frac{x^{2n+1}}{2n+1} \\
+&\ln(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1} \ \frac{x^n}{n}
 \end{aligned}$$
 
 These Taylor series expansions suggest that transcendental functions behave similarly to infinite polynomials.
